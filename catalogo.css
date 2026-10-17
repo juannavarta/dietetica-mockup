@@ -1,0 +1,232 @@
+/* ==========================================================================
+   CATALOG PAGE STYLES (catalog.css)
+   ========================================================================== */
+
+/* --- 1. ENCABEZADO DEL CATÁLOGO --- */
+.catalog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5% 5rem 5%;
+}
+
+.catalog-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.catalog-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 0.8rem;
+}
+
+.catalog-header p {
+    color: var(--color-text-body);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* --- 2. CONTROLES DEL CATÁLOGO (FILTROS Y BÚSQUEDA) --- */
+.catalog-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Filtros de Categorías (Píldoras / Tabs) */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: flex-start;
+}
+
+.filter-btn {
+    background-color: var(--color-white);
+    color: var(--color-text-body);
+    border: 1px solid #E5E0D8;
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+/* Barra de Búsqueda y Selector de Ordenamiento */
+.search-and-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.7rem 1rem 0.7rem 2.6rem;
+    border: 1px solid #E5E0D8;
+    border-radius: 12px;
+    background-color: var(--color-white);
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary);
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Selector desplegable de Ordenamiento */
+.sort-box select {
+    padding: 0.7rem 1.2rem;
+    border: 1px solid #E5E0D8;
+    border-radius: 12px;
+    background-color: var(--color-white);
+    font-size: 0.9rem;
+    color: var(--color-dark);
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.sort-box select:focus {
+    border-color: var(--color-primary);
+}
+
+/* --- 3. GRILLA DE PRODUCTOS DEL CATÁLOGO --- */
+.catalog-grid-section .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #FAF8F5;
+    margin-bottom: 1rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info .category {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    color: var(--color-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.product-info .price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.btn-add-cart {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-add-cart:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* --- RESPONSIVE ADAPTATIONS --- */
+@media (max-width: 992px) {
+    .catalog-grid-section .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .catalog-header h1 {
+        font-size: 2rem;
+    }
+
+    .search-and-sort {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .catalog-grid-section .products-grid {
+        grid-template-columns: 1fr;
+    }
+}

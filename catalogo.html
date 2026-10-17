@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado principal (Header) -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="imgs/Logo Base Blanca.png" alt="Dietética Cuyo Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="landing.html">Inicio</a></li>
+                <li><a href="landing.html#nosotros">Nosotros</a></li>
+                <li><a href="landing.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+            <a href="carrito.html" class="cart-icon" aria-label="Carrito de compras">
+                <img src="imgs/Frame.png" alt="">
+                <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-icon" aria-label="Cuenta de usuario">
+                <img src="imgs/Frame2.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Contenido Principal del Catálogo -->
+    <main class="catalog-page">
+        <!-- Encabezado de la página -->
+        <section class="catalog-header">
+            <h1>Nuestros Productos</h1>
+            <p>Explorá nuestra selección consciente de alimentos naturales, libres de gluten y suplementos de primer nivel.</p>
+        </section>
+
+        <!-- Barra de Controles: Filtros de Categorías, Búsqueda y Ordenamiento -->
+        <section class="catalog-controls">
+            <!-- Categorías (Filtros de tipo Píldora / Tabs) -->
+            <div class="category-filters" role="tablist">
+                <button class="filter-btn active" role="tab" aria-selected="true">Todos</button>
+                <button class="filter-btn" role="tab">Sin TACC</button>
+                <button class="filter-btn" role="tab">Frutos Secos</button>
+                <button class="filter-btn" role="tab">Suplementos</button>
+                <button class="filter-btn" role="tab">Orgánicos</button>
+                <button class="filter-btn" role="tab">Bebidas Vegetales</button>
+            </div>
+
+            <!-- Búsqueda y Ordenamiento -->
+            <div class="search-and-sort">
+                <div class="search-box">
+                    <img src="icon-search.svg" alt="" class="search-icon">
+                    <input type="search" placeholder="Buscar producto..." aria-label="Buscar producto">
+                </div>
+
+                <div class="sort-box">
+                    <label for="sort-select" class="sr-only">Ordenar por</label>
+                    <select id="sort-select">
+                        <option value="destacados">Ordenar por: Destacados</option>
+                        <option value="precio-bajo">Precio: menor a mayor</option>
+                        <option value="precio-alto">Precio: mayor a menor</option>
+                        <option value="nombre">Nombre: A-Z</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grilla de Productos del Catálogo -->
+        <section class="catalog-grid-section">
+            <div class="products-grid">
+
+                <!-- Producto 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/harinaAlmendras.png" alt="Harina de Almendras Sin TACC">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Sin TACC</span>
+                        <h3>Harina de Almendras Sin TACC</h3>
+                        <p class="price">$1.890</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/lecheAlmendras.png" alt="Leche de Almendras Orgánica">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Bebidas Vegetales</span>
+                        <h3>Leche de Almendras Orgánica</h3>
+                        <p class="price">$1.450</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/proteinaVeganaChoco.png" alt="Proteína Vegana Chocolate">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Suplementos</span>
+                        <h3>Proteína Vegana Chocolate</h3>
+                        <p class="price">$4.890</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/semillaChiaOrg.png" alt="Semillas de Chía Orgánicas">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Orgánicos</span>
+                        <h3>Semillas de Chía Orgánicas</h3>
+                        <p class="price">$990</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 5 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/aceiteCocoNeutro.png" alt="Aceite de Coco Neutro">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Orgánicos</span>
+                        <h3>Aceite de Coco Neutro</h3>
+                        <p class="price">$3.590</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 6 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/granolaSinAzucar.png" alt="Granola Sin Azúcar">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Frutos Secos</span>
+                        <h3>Granola Sin Azúcar</h3>
+                        <p class="price">$1.650</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 7 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/spirulinaPura.png" alt="Spirulina Pura en Polvo">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Suplementos</span>
+                        <h3>Spirulina Pura en Polvo</h3>
+                        <p class="price">$2.990</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 8 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/colagenoHidrolizado.png" alt="Colágeno Hidrolizado">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Suplementos</span>
+                        <h3>Colágeno Hidrolizado</h3>
+                        <p class="price">$5.450</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 9 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/mixEnergico.png" alt="Mix Energético Premium">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Frutos Secos</span>
+                        <h3>Mix Energético Premium</h3>
+                        <p class="price">$2.100</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. Pie de página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="logo-footer.png" alt="Dietética Cuyo" class="footer-logo">
+                <p>Tu almacén natural de confianza en San Juan. Comprometidos con la alimentación consciente y los productores locales desde 2015.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Atención al Cliente</h4>
+                <p>Dirección: Gral. Acha 12(s), Ciudad de San Juan</p>
+                <p>Horarios: Lunes a Viernes de 8:30 a 13:00 / 16:30 a 20:30 · Sábados de 9:00 a 13:00 / 16:30 a 20:30</p>
+                <p>Teléfono: +54 9 2646 61-1836</p>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Seguinos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
+                    <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
+                    <a href="#" aria-label="WhatsApp"><img src="icon-whatsapp.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Dietética CUYO. Todos los derechos reservados.</p>
+            <p>San Juan, Argentina · Hecho con amor local</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+/* ==========================================================================
+   CART PAGE STYLES (cart.css)
+   ========================================================================== */
+
+/* --- 1. ENCABEZADO DE LA PÁGINA --- */
+.cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 5% 5rem 5%;
+}
+
+.cart-title-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.cart-title-container h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-dark);
+}
+
+.badge-count {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+}
+
+/* --- 2. LAYOUT PRINCIPAL (DOS COLUMNAS) --- */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+/* --- 3. COLUMNA IZQUIERDA: LISTA DE PRODUCTOS --- */
+.cart-items-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart-items-list {
+    list-style: none;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 80px 2fr 110px 100px 40px;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #F0ECE6;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Miniatura del Producto */
+.item-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #FAF8F5;
+}
+
+.item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Información del Producto */
+.item-details .category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    display: block;
+}
+
+.item-details h3 {
+    font-size: 1.05rem;
+    color: var(--color-dark);
+    margin: 0.2rem 0;
+    font-weight: 600;
+}
+
+.item-details .unit-price {
+    font-size: 0.82rem;
+    color: var(--color-text-body);
+}
+
+/* Selector de Cantidad (- / +) */
+.item-quantity {
+    display: flex;
+    align-items: center;
+    background-color: #F6F3EE;
+    border-radius: 10px;
+    padding: 0.2rem;
+}
+
+.item-quantity button {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.item-quantity button:hover {
+    color: var(--color-primary);
+}
+
+.item-quantity input {
+    width: 35px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-dark);
+    outline: none;
+    /* Oculta flechas por defecto de tipo number */
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.item-quantity input::-webkit-outer-spin-button,
+.item-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Precio Total por Producto */
+.item-total {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-align: right;
+}
+
+/* Botón Eliminar (Tacho de Basura) */
+.btn-remove {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-fast);
+}
+
+.btn-remove:hover {
+    background-color: #FCE8E6;
+}
+
+.btn-remove img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Banner de Alerta de Envío Gratis */
+.shipping-alert {
+    background-color: #FFF8E7;
+    border: 1px solid #FFE3A8;
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #7A5200;
+    font-size: 0.9rem;
+}
+
+.shipping-alert .alert-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* --- 4. COLUMNA DERECHA: RESUMEN DEL PEDIDO --- */
+.cart-summary-section {
+    position: sticky;
+    top: 100px; /* Se queda fijo en pantalla al hacer scroll */
+}
+
+.summary-card {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.summary-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--color-text-body);
+    margin-bottom: 1.2rem;
+}
+
+.summary-row .price {
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+/* Agrupaciones de Formulario (Envío y Pago) */
+.summary-group {
+    border: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.summary-group legend {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    letter-spacing: 0.8px;
+    margin-bottom: 0.8rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+.radio-option input[type="radio"] {
+    accent-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+    margin-right: 0.6rem;
+}
+
+.radio-option .radio-label {
+    flex: 1;
+}
+
+.radio-option .radio-price {
+    font-weight: 700;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #F0ECE6;
+    margin: 1.5rem 0;
+}
+
+/* Fila de Total Final */
+.total-row {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 1.8rem;
+}
+
+.total-row .total-price {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-accent);
+}
+
+/* Botones de Acción */
+.btn-checkout {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    margin-bottom: 1rem;
+}
+
+.btn-checkout:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-back-link {
+    display: block;
+    text-align: center;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: opacity var(--transition-fast);
+}
+
+.btn-back-link:hover {
+    opacity: 0.8;
+}
+
+/* --- RESPONSIVE ADAPTATIONS --- */
+@media (max-width: 992px) {
+    .cart-layout {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+    }
+
+    .cart-summary-section {
+        position: static; /* Pierde el sticky en móviles/tablets */
+    }
+}
+
+@media (max-width: 650px) {
+    .cart-item {
+        grid-template-columns: 60px 1fr 30px;
+        grid-template-areas: 
+            "thumb details remove"
+            "quantity total total";
+        gap: 0.8rem;
+    }
+
+    .item-thumb {
+        grid-area: thumb;
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details {
+        grid-area: details;
+    }
+
+    .btn-remove {
+        grid-area: remove;
+        justify-self: end;
+    }
+
+    .item-quantity {
+        grid-area: quantity;
+        width: fit-content;
+    }
+
+    .item-total {
+        grid-area: total;
+        align-self: center;
+    }
+}

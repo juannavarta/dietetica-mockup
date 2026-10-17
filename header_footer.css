@@ -1,0 +1,274 @@
+/* ==========================================================================
+   VARIABLES GLOBALES (PALETA DE COLORES Y FUENTES)
+   ========================================================================== */
+:root {
+    --bg-main: #F8F5EE;          /* Fondo crema/beige claro de la web */
+    --color-primary: #A82026;      /* Rojo institucional de los botones y bordes */
+    --color-primary-hover: #88181D;/* Rojo más oscuro para estados hover */
+    --color-accent: #E07A5F;       /* Naranja/dorado para etiquetas o badges */
+    --color-dark: #231F20;         /* Gris casi negro para footer y textos oscuros */
+    --color-text-body: #4A4A4A;    /* Gris neutro para textos secundarios */
+    --color-white: #FFFFFF;
+    
+    --font-heading: 'Georgia', serif; /* Tipo de letra para títulos si no usas una font externa */
+    --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    
+    --transition-fast: 0.2s ease;
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Base reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--color-dark);
+}
+
+/* ==========================================================================
+   1. ENCABEZADO PRINCIPAL (HEADER)
+   ========================================================================== */
+.main-header {
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+/* Logo */
+.main-header .logo img {
+    max-height: 96px;
+    width: auto;
+    display: block;
+}
+
+/* Navegación Central */
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+}
+
+.main-nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Botones e Iconos de la Derecha */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* Botón "Ver Catálogo" */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color var(--transition-fast);
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Iconos de Carrito y Usuario */
+.cart-icon, .user-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F3F3F3;
+    transition: background-color var(--transition-fast);
+}
+
+.cart-icon:hover, .user-icon:hover, .user-icon.active {
+    background-color: #E8E8E8;
+}
+
+.cart-icon img, .user-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Badge de contador en el carrito */
+.cart-count {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ==========================================================================
+   2. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.main-footer {
+    background-color: var(--color-dark);
+    color: #E0E0E0;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr 1.5fr 1fr;
+    gap: 2.5rem;
+}
+
+.footer-col h4 {
+    color: var(--color-white);
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+/* Columna de Marca (Logo y descripción) */
+.brand-col .footer-logo {
+    max-height: 45px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1); /* Convierte el logo en blanco si es oscuro */
+}
+
+.brand-col p {
+    line-height: 1.6;
+    color: #A0A0A0;
+}
+
+/* Columna de Links */
+.links-col ul {
+    list-style: none;
+}
+
+.links-col li {
+    margin-bottom: 0.6rem;
+}
+
+.links-col a {
+    color: #A0A0A0;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.links-col a:hover {
+    color: var(--color-white);
+}
+
+/* Columna de Atención al Cliente */
+.contact-col p {
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+    color: #A0A0A0;
+}
+
+/* Columna de Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color var(--transition-fast);
+}
+
+.social-links a:hover {
+    background-color: var(--color-primary);
+}
+
+.social-links img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+/* Barra inferior de Copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2.5rem auto 0 auto;
+    padding: 1.5rem 5% 0 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE (ADAPTACIÓN A MÓVILES Y TABLETS)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-header {
+        padding: 0.8rem 4%;
+    }
+
+    /* Ocultamos temporalmente la lista del menú en pantallas muy chicas */
+    .main-nav {
+        display: none; 
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}

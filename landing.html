@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado principal (Header) -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="imgs/Logo Base Blanca.png" alt="Dietética Cuyo Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+            <a href="carrito.html" class="cart-icon" aria-label="Carrito de compras">
+                <img src="imgs/Frame.png" alt="">
+                <span class="cart-count">0</span>
+            </a>
+            <a href="login.html" class="user-icon" aria-label="Cuenta de usuario">
+                <img src="imgs/Frame2.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Sección Principal / Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Alimentación Consciente & Natural</span>
+                <h1>Tu bienestar empieza aquí, elegí natural.</h1>
+                <p>Encontrá los mejores productos orgánicos, frutos secos de nuestro San Juan y suplementos naturales seleccionados para potenciar tu vida diaria.</p>
+                <div class="hero-buttons">
+                    <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="#historia" class="btn btn-secondary">Nuestra Historia</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="imgs/Logo Base Blanca.png" alt="Herboristería Cuyo Dietética">
+            </div>
+        </section>
+
+        <!-- 3. Sección "Nuestra Historia" / About Us -->
+        <section id="nosotros" class="about-section">
+            <div class="about-image">
+                <img src="imgs/Rectangle.png" alt="Local de Dietética Cuyo con frascos e hierbas">
+            </div>
+            <div class="about-content">
+                <span class="badge">Nuestra Historia</span>
+                <h2>Dietética CUYO, desde siempre con vos.</h2>
+                <p>Nacimos en San Juan con el propósito de acercar alternativas saludables a nuestra comunidad. Creemos en el poder transformador de la alimentación natural y en el apoyo constante a los productores de nuestra región.</p>
+                <blockquote class="quote">
+                    "Elegir natural no es una moda, es volver a lo esencial."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- 4. Sección "Productos Destacados" / E-commerce Grid -->
+        <section id="catalogo" class="featured-products">
+            <div class="section-header">
+                <div>
+                    <span class="section-tag">FAVORITOS DEL MES</span>
+                    <h2>Productos Destacados</h2>
+                </div>
+                <a href="#catalogo-completo" class="btn btn-outline">Ver todo el catálogo</a>
+            </div>
+
+            <div class="products-grid">
+                <!-- Tarjeta de Producto 1 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/proteinaVegana.png" alt="Proteína Vegana">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">SUPLEMENTOS</span>
+                        <h3>Proteína Vegana</h3>
+                        <p class="price">$4.890</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Producto 2 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/granolaArtesanal.png" alt="Granola Artesanal">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">REPOSTERÍA</span>
+                        <h3>Granola Artesanal</h3>
+                        <p class="price">$2.150</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Producto 3 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/aceiteCoco.png" alt="Aceite de Coco Orgánico">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">ORGÁNICOS</span>
+                        <h3>Aceite de Coco Orgánico</h3>
+                        <p class="price">$3.890</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Producto 4 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/mixFrutosSecos.png" alt="Mix de Frutos Secos">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">SIN TACC</span>
+                        <h3>Mix de Frutos Secos</h3>
+                        <p class="price">$1.950</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Producto 5 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/spirulinaPolvo.png" alt="Spirulina en Polvo">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">SUPERFOODS</span>
+                        <h3>Spirulina en Polvo</h3>
+                        <p class="price">$2.990</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta de Producto 6 -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="imgs/mielOrg.png" alt="Miel Orgánica">
+                    </div>
+                    <div class="product-info">
+                        <span class="category">ORGÁNICOS</span>
+                        <h3>Miel Orgánica</h3>
+                        <p class="price">$2.450</p>
+                        <button class="btn btn-add-cart">Agregar al Carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. Sección "¿Por qué elegirnos?" / Features Section -->
+        <section class="features-section">
+            <span class="section-tag">VALORES CUYO</span>
+            <h2>¿Por qué elegirnos?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon"><img src="icon-truck.svg" alt=""></div>
+                    <h3>Envío local en San Juan</h3>
+                    <p>Recibí tu pedido en la puerta de tu casa rápidamente.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><img src="icon-check.svg" alt=""></div>
+                    <h3>Calidad orgánica certificada</h3>
+                    <p>Seleccionamos cuidadosamente cada uno de nuestros productos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><img src="icon-chat.svg" alt=""></div>
+                    <h3>Atención personalizada</h3>
+                    <p>Te asesoramos según tus necesidades nutricionales.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon"><img src="icon-price.svg" alt=""></div>
+                    <h3>Precios accesibles</h3>
+                    <p>Ofrecemos la mejor relación calidad-precio de la región.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Sección "Nuestra Sucursal" / Ubicación y Contacto -->
+        <section id="contacto" class="location-section">
+            <div class="location-info">
+                <span class="section-tag">TE ESPERAMOS EN SAN JUAN</span>
+                <h2>Nuestra Sucursal</h2>
+                <ul>
+                    <li>
+                        <img src="icon-pin.svg" alt="">
+                        <span>Gral. Acha Sur, Ciudad de San Juan</span>
+                    </li>
+                    <li>
+                        <img src="icon-clock.svg" alt="">
+                        <span>Lunes a Viernes de 9:00 a 13:00 / 17:00 a 21:00<br>Sábados de 9:00 a 13:00 y 17:30 a 20:30</span>
+                    </li>
+                    <li>
+                        <img src="icon-phone.svg" alt="">
+                        <span>+54 9 264 000-0000 | contacto@dieteticacuyo.com.ar</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="location-map">
+                <!-- Puedes incluir un iframe de Google Maps aquí -->
+                <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Pie de Página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="logo-footer.png" alt="Dietética Cuyo" class="footer-logo">
+                <p>Alimentación natural de confianza en San Juan. Comprometidos con tu alimentación consciente e integral desde hace más de 10 años.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#catalogo">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Atención al Cliente</h4>
+                <p>Dirección: Gral. Acha Sur, Ciudad de San Juan</p>
+                <p>Horario: Lunes a Viernes de 9:00 a 13:00 / 17:00 a 21:00, Sábados 9:30 a 13:00 / 17:30 a 20:30</p>
+                <p>Teléfono: +54 9 264 000-0000</p>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
+                    <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
+                    <a href="#" aria-label="WhatsApp"><img src="icon-whatsapp.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

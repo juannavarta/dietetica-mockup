@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado principal (Header) -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="imgs/Logo Base Blanca.png" alt="Dietética Cuyo Logo">
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="landing.html">Inicio</a></li>
+                <li><a href="landing.html#nosotros">Nosotros</a></li>
+                <li><a href="landing.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+            <a href="carrito.html" class="cart-icon" aria-label="Carrito de compras">
+                <img src="imgs/Frame.png" alt="">
+                <span class="cart-count">4</span>
+            </a>
+            <a href="login.html" class="user-icon" aria-label="Cuenta de usuario">
+                <img src="imgs/Frame2.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Sección Principal del Carrito -->
+    <main class="cart-page">
+        <!-- Título de la sección con contador -->
+        <div class="cart-title-container">
+            <h1>Tu Carrito</h1>
+            <span class="badge badge-count">5 Productos</span>
+        </div>
+
+        <div class="cart-layout">
+            
+            <!-- Columna Izquierda: Lista de Ítems del Carrito -->
+            <section class="cart-items-section">
+                <ul class="cart-items-list">
+                    
+                    <!-- Producto 1 -->
+                    <li class="cart-item">
+                        <div class="item-thumb">
+                            <img src="imgs/proteVeganaImgChica.png" alt="Proteína Vegana">
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Suplementos</span>
+                            <h3>Proteína Vegana</h3>
+                            <span class="unit-price">ARS $4890 c/u</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" aria-label="Disminuir cantidad">-</button>
+                            <input type="number" value="1" min="1" aria-label="Cantidad">
+                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="item-total">
+                            <span>$4890</span>
+                        </div>
+                        <button type="button" class="btn-remove" aria-label="Eliminar producto">
+                            <img src="imgs/trash.png" alt="">
+                        </button>
+                    </li>
+
+                    <!-- Producto 2 -->
+                    <li class="cart-item">
+                        <div class="item-thumb">
+                            <img src="imgs/granolaArtesanalImgChica.png" alt="Granola Artesanal">
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Frutos Secos</span>
+                            <h3>Granola Artesanal</h3>
+                            <span class="unit-price">ARS $2450 c/u</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" aria-label="Disminuir cantidad">-</button>
+                            <input type="number" value="2" min="1" aria-label="Cantidad">
+                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="item-total">
+                            <span>$4900</span>
+                        </div>
+                        <button type="button" class="btn-remove" aria-label="Eliminar producto">
+                            <img src="imgs/trash.png" alt="">
+                        </button>
+                    </li>
+
+                    <!-- Producto 3 -->
+                    <li class="cart-item">
+                        <div class="item-thumb">
+                            <img src="imgs/aceiteCocoImgChica.png" alt="Aceite de Coco Orgánico">
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Orgánicos</span>
+                            <h3>Aceite de Coco Orgánico</h3>
+                            <span class="unit-price">ARS $3200 c/u</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" aria-label="Disminuir cantidad">-</button>
+                            <input type="number" value="1" min="1" aria-label="Cantidad">
+                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="item-total">
+                            <span>$3200</span>
+                        </div>
+                        <button type="button" class="btn-remove" aria-label="Eliminar producto">
+                            <img src="imgs/trash.png" alt="">
+                        </button>
+                    </li>
+
+                    <!-- Producto 4 -->
+                    <li class="cart-item">
+                        <div class="item-thumb">
+                            <img src="imgs/semillaChiaImgChica.png" alt="Semillas de Chía">
+                        </div>
+                        <div class="item-details">
+                            <span class="category">Orgánicos</span>
+                            <h3>Semillas de Chía</h3>
+                            <span class="unit-price">ARS $1890 c/u</span>
+                        </div>
+                        <div class="item-quantity">
+                            <button type="button" aria-label="Disminuir cantidad">-</button>
+                            <input type="number" value="1" min="1" aria-label="Cantidad">
+                            <button type="button" aria-label="Aumentar cantidad">+</button>
+                        </div>
+                        <div class="item-total">
+                            <span>$1890</span>
+                        </div>
+                        <button type="button" class="btn-remove" aria-label="Eliminar producto">
+                            <img src="imgs/trash.png" alt="">
+                        </button>
+                    </li>
+
+                </ul>
+
+                <!-- Banner Informativo de Envío Gratis -->
+                <div class="shipping-alert">
+                    <img src="imgs/Icon-truck.png" alt="" class="alert-icon">
+                    <p><strong>¡Sumaste un producto adicional!</strong> Disfrutá de envío gratis dentro de San Juan.</p>
+                </div>
+            </section>
+
+            <!-- Columna Derecha: Resumen del Pedido (Sidebar / Checkout) -->
+            <aside class="cart-summary-section">
+                <div class="summary-card">
+                    <h2>Resumen del Pedido</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="price">$12.880</span>
+                    </div>
+
+                    <!-- Selección de Método de Envío -->
+                    <fieldset class="summary-group">
+                        <legend>MÉTODO DE ENVÍO</legend>
+                        <label class="radio-option">
+                            <input type="radio" name="shipping" value="domicilio" checked>
+                            <span class="radio-label">Envío a domicilio</span>
+                            <span class="radio-price">$500</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="shipping" value="tienda">
+                            <span class="radio-label">Retiro en tienda</span>
+                            <span class="radio-price">Gratis</span>
+                        </label>
+                    </fieldset>
+
+                    <!-- Selección de Medio de Pago -->
+                    <fieldset class="summary-group">
+                        <legend>MEDIO DE PAGO</legend>
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="transferencia" checked>
+                            <span>Transferencia bancaria</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="mercadopago">
+                            <span>Mercado Pago</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="payment" value="efectivo">
+                            <span>Efectivo en tienda</span>
+                        </label>
+                    </fieldset>
+
+                    <hr class="divider">
+
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span class="total-price">$13.380</span>
+                    </div>
+
+                    <button class="btn btn-checkout">Confirmar Pedido</button>
+                    <a href="#catalogo" class="btn-back-link">← Seguir Comprando</a>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- 3. Pie de página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <img src="logo-footer.png" alt="Dietética Cuyo" class="footer-logo">
+                <p>Tu almacén natural de confianza en San Juan. Comprometidos con la alimentación consciente y los productores locales desde 2015.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Atención al Cliente</h4>
+                <p>Dirección: Gral. Acha 12(s), Ciudad de San Juan</p>
+                <p>Horarios: Lunes a Viernes de 8:30 a 13:00 / 16:30 a 20:30 · Sábados de 9:00 a 13:00 / 16:30 a 20:30</p>
+                <p>Teléfono: +54 9 2646 61-1836</p>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4>Seguinos</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt=""></a>
+                    <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt=""></a>
+                    <a href="#" aria-label="WhatsApp"><img src="icon-whatsapp.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Dietética CUYO. Todos los derechos reservados.</p>
+            <p>San Juan, Argentina · Hecho con amor local</p>
+        </div>
+    </footer>
+
+</body>
+</html>
